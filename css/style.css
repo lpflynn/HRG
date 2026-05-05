@@ -71,6 +71,14 @@ main {
   letter-spacing: 0.01em;
   margin: 0;
 }
+.project-byline {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--fg-muted);
+  margin-left: 6px;
+}
 .project-subtitle {
   font-size: 12px;
   letter-spacing: 0.06em;
