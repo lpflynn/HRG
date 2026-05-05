@@ -230,6 +230,10 @@ main {
   opacity: 1;
   transform: translateX(0);
 }
+.era-pin.label-hidden:not(:hover) .era-pin-label {
+  opacity: 0;
+  transform: translateX(-4px);
+}
 .era-pin:hover .era-pin-dot {
   transform: scale(1.35);
   box-shadow:
@@ -301,9 +305,28 @@ main {
 .era-section p { margin: 0 0 8px; }
 .era-commentary {
   font-family: var(--serif);
-  font-size: 17px;
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.5;
   color: var(--fg);
+}
+ul.era-commentary {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul.era-commentary li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 6px;
+}
+ul.era-commentary li::before {
+  content: "·";
+  position: absolute;
+  left: 4px;
+  top: -2px;
+  color: var(--accent-warm);
+  font-weight: 700;
+  font-size: 18px;
 }
 .era-commentary.placeholder,
 .placeholder { color: var(--fg-dim); font-style: italic; }
@@ -362,10 +385,8 @@ main {
 }
 .era-song-btn:hover { border-color: var(--fg-muted); background: rgba(255,255,255,0.03); }
 .era-song-btn::before { content: "\25B6"; color: var(--accent-warm); font-size: 10px; }
-.era-sources { font-size: 12px; color: var(--fg-muted); }
-.era-sources li { margin-bottom: 4px; }
 
-/* ---------- audio player ---------- */
+/* ---------- audio player (Apple Music embed) ---------- */
 #audio-player {
   position: absolute;
   left: 24px;
@@ -373,11 +394,11 @@ main {
   z-index: 8;
   background: var(--panel-bg);
   border: 1px solid var(--rule);
-  padding: 12px 14px;
+  padding: 10px 12px 12px;
   display: flex;
-  align-items: center;
-  gap: 14px;
-  min-width: 260px;
+  flex-direction: column;
+  gap: 8px;
+  width: 380px;
   transition: opacity var(--transition-med), transform var(--transition-med);
   backdrop-filter: blur(4px);
 }
@@ -386,71 +407,46 @@ main {
   transform: translateY(8px);
   pointer-events: none;
 }
-.audio-meta { flex: 1 1 auto; min-width: 0; }
-.audio-title {
-  font-family: var(--serif);
-  font-size: 14px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.audio-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 .audio-era {
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--fg-dim);
-  margin-top: 2px;
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.audio-controls { display: flex; gap: 4px; }
+#audio-iframe {
+  width: 100%;
+  height: 175px;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+  display: block;
+}
 .audio-btn {
   background: transparent;
   border: 1px solid var(--rule);
   color: var(--fg);
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  flex: 0 0 auto;
   transition: border-color var(--transition-fast);
 }
 .audio-btn:hover { border-color: var(--fg-muted); }
-.audio-close { font-size: 18px; }
-
-/* ---------- about overlay ---------- */
-#about-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 20;
-  background: rgba(5,6,8,0.78);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
-  transition: opacity var(--transition-med);
-}
-#about-overlay.overlay-hidden { opacity: 0; pointer-events: none; }
-.overlay-card {
-  position: relative;
-  background: var(--bg-elevated);
-  border: 1px solid var(--rule);
-  padding: 36px 40px;
-  max-width: 560px;
-}
-.overlay-card h2 {
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: 26px;
-  margin: 0 0 16px;
-}
-.about-body p { color: var(--fg-muted); }
-.about-credit {
-  margin-top: 24px;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--fg-dim);
-}
+.audio-close { font-size: 16px; }
 
 /* ---------- mobile block ---------- */
 #mobile-block {

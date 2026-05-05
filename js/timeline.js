@@ -3,7 +3,7 @@
 */
 
 window.HRTimeline = (function () {
-  function create({ slider, yearDisplay, playToggle, playIcon, bandsContainer, minYear, maxYear, onChange, onPlayStart }) {
+  function create({ slider, yearDisplay, playToggle, playIcon, bandsContainer, minYear, maxYear, onChange, onPlayStart, onEnd }) {
     let currentYear = parseInt(slider.value, 10) || minYear;
     let yearFloat = currentYear;
     let isPlaying = false;
@@ -32,6 +32,7 @@ window.HRTimeline = (function () {
         if (next >= maxYear) {
           setYear(maxYear);
           stop();
+          if (typeof onEnd === 'function') onEnd();
           return;
         }
         setYear(next);

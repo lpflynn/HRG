@@ -38,7 +38,7 @@ window.HRGlobe = (function () {
       .htmlAltitude(0.005)
       .htmlElement(d => {
         const el = document.createElement('div');
-        el.className = 'era-pin';
+        el.className = 'era-pin always-label';
         el.style.setProperty('--pin-color', d.color);
         el.innerHTML = [
           '<span class="era-pin-pulse"></span>',
@@ -87,13 +87,25 @@ window.HRGlobe = (function () {
     function expandErasToPoints(eras) {
       const points = [];
       for (const era of eras) {
-        if (era.ongoing && Array.isArray(era.regions) && era.regions.length) {
+        const eraLabel = era.shortLabel || era.title;
+        if (Array.isArray(era.events) && era.events.length) {
+          for (const ev of era.events) {
+            points.push({
+              lat: ev.lat,
+              lng: ev.lng,
+              color: pinFlatColor(era),
+              shortLabel: ev.year + ' ' + ev.name,
+              title: era.title,
+              eraId: era.id
+            });
+          }
+        } else if (era.ongoing && Array.isArray(era.regions) && era.regions.length) {
           for (const r of era.regions) {
             points.push({
               lat: r.lat,
               lng: r.lng,
               color: pinFlatColor(era),
-              shortLabel: era.shortLabel || era.title,
+              shortLabel: r.name ? r.name + ' — ' + eraLabel : eraLabel,
               title: era.title,
               eraId: era.id
             });
@@ -103,7 +115,7 @@ window.HRGlobe = (function () {
             lat: era.primaryCoords.lat,
             lng: era.primaryCoords.lng,
             color: pinFlatColor(era),
-            shortLabel: era.shortLabel || era.title,
+            shortLabel: eraLabel,
             title: era.title,
             eraId: era.id
           });
@@ -111,6 +123,63 @@ window.HRGlobe = (function () {
       }
       return points;
     }
+
+    function deconflictLabels() {
+      const cRect = container.getBoundingClientRect();
+      const cx = cRect.left + cRect.width / 2;
+      const cy = cRect.top + cRect.height / 2;
+      const pins = container.querySelectorAll('.era-pin');
+      const items = [];
+      for (const el of pins) {
+        const dot = el.getBoundingClientRect();
+        const inView =
+          dot.right > cRect.left && dot.left < cRect.right &&
+          dot.bottom > cRect.top && dot.top < cRect.bottom;
+        if (!inView) {
+          el.classList.add('label-hidden');
+          continue;
+        }
+        const labelEl = el.querySelector('.era-pin-label');
+        if (!labelEl) continue;
+        const dotCx = dot.left + dot.width / 2;
+        const dotCy = dot.top + dot.height / 2;
+        items.push({
+          el,
+          labelRect: labelEl.getBoundingClientRect(),
+          dist: Math.hypot(dotCx - cx, dotCy - cy)
+        });
+      }
+      items.sort((a, b) => a.dist - b.dist);
+      const placed = [];
+      const PAD = 2;
+      for (const item of items) {
+        const r = item.labelRect;
+        let collides = false;
+        for (const p of placed) {
+          if (!(r.right + PAD < p.left || p.right + PAD < r.left ||
+                r.bottom + PAD < p.top || p.bottom + PAD < r.top)) {
+            collides = true;
+            break;
+          }
+        }
+        if (collides) {
+          item.el.classList.add('label-hidden');
+        } else {
+          item.el.classList.remove('label-hidden');
+          placed.push(r);
+        }
+      }
+    }
+
+    let lastDeconflict = 0;
+    function deconflictTick(t) {
+      if (t - lastDeconflict > 120) {
+        deconflictLabels();
+        lastDeconflict = t;
+      }
+      requestAnimationFrame(deconflictTick);
+    }
+    requestAnimationFrame(deconflictTick);
 
     return {
       raw: globe,

@@ -2,8 +2,8 @@
 
 (function () {
   const MIN_YEAR = 1400;
-  const MAX_YEAR = 2030;
-  const DWELL_MS = 5000; // pause this long on each newly-activated era during autoplay
+  const MAX_YEAR = 2026;
+  const DWELL_MS = 20000; // pause this long on each newly-activated era during autoplay
 
   let eras = [];
   let arcs = [];
@@ -32,6 +32,7 @@
     focusedEraId = era.id;
     panel.open(era, songCatalog);
     globe.setFocusedEra(era);
+    globe.setActiveEras([era]); // hide everything else while reading
     globe.setAutoRotateSpeed(0.06); // very slow drift while reading
     const coords = era.primaryCoords || (era.regions && era.regions[0]) || null;
     if (coords) globe.flyTo(coords, 1500);
@@ -65,11 +66,20 @@
       return;
     }
     if (!dwellQueue.length) {
-      timeline.resumeAdvance();
+      if (timeline.advancePaused) timeline.resumeAdvance();
       return;
     }
     const era = dwellQueue.shift();
     focusEra(era);
+    // skipDwell eras: focus camera/panel but don't freeze the clock.
+    if (era.skipDwell) {
+      if (dwellQueue.length) {
+        dwellTimer = setTimeout(processDwellQueue, 0);
+      } else if (timeline.advancePaused) {
+        timeline.resumeAdvance();
+      }
+      return;
+    }
     dwellTimer = setTimeout(processDwellQueue, DWELL_MS);
   }
 
@@ -119,20 +129,28 @@
     // only repaint pins/polygons when the active set actually changes
     // (otherwise every year-tick triggers transition animations → visible jitter)
     if (!setsEqual(currentIds, previousActiveIds)) {
-      globe.setActiveEras(list);
+      // while focused, keep showing only the focused era's pins
+      const pinList = focusedEraId
+        ? list.filter(e => e.id === focusedEraId)
+        : list;
+      globe.setActiveEras(pinList);
       globe.setPolygons(buildPolygonItems(list));
     }
 
     const isAutoplaying = timeline && timeline.isPlaying;
 
     if (isAutoplaying) {
-      // guided-tour: queue all newly-active eras, dwell on each so the
-      // audience has time to read before the timeline keeps moving
+      // guided-tour: queue all newly-active eras. Most pause the clock for
+      // DWELL_MS so the audience can read; skipDwell eras (e.g. ongoing
+      // openers like native-dispossession) only steal focus, no pause.
       const newlyActive = list.filter(e => !previousActiveIds.has(e.id));
       if (newlyActive.length) {
         dwellQueue.push(...newlyActive);
-        if (!dwellTimer && !timeline.advancePaused) {
-          timeline.pauseAdvance();
+        if (!dwellTimer) {
+          // only freeze the clock if the queue contains an era that needs to dwell
+          if (dwellQueue.some(e => !e.skipDwell) && !timeline.advancePaused) {
+            timeline.pauseAdvance();
+          }
           processDwellQueue();
         }
       }
@@ -155,10 +173,22 @@
     focusEra(era);
   }
 
+  function onTimelineEnd() {
+    // reached MAX_YEAR — unfocus and show every era still active in 2026.
+    // panel.close() fires onPanelClose, which clears focus, drains the dwell
+    // queue, and repaints the full active set.
+    if (panel && typeof panel.close === 'function') panel.close();
+  }
+
   function onPanelClose() {
     focusedEraId = null;
     globe.setFocusedEra(null);
     globe.setAutoRotateSpeed(0.35); // back to ambient drift
+    if (timeline) {
+      const list = activeEras(timeline.currentYear);
+      globe.setActiveEras(list);
+      previousActiveIds = new Set(list.map(e => e.id));
+    }
     clearDwellQueue();
     if (timeline) timeline.resumeAdvance();
   }
@@ -216,7 +246,8 @@
       minYear: MIN_YEAR,
       maxYear: MAX_YEAR,
       onChange: onYearChange,
-      onPlayStart: skipToNextEvent
+      onPlayStart: skipToNextEvent,
+      onEnd: onTimelineEnd
     });
     timeline.renderBands(eras);
 
@@ -230,22 +261,10 @@
 
     audio = HRAudio.create({
       playerEl: document.getElementById('audio-player'),
-      audioEl:  document.getElementById('audio-element'),
-      titleEl:  document.getElementById('audio-title'),
+      iframeEl: document.getElementById('audio-iframe'),
       eraEl:    document.getElementById('audio-era'),
-      toggleBtn: document.getElementById('audio-toggle'),
-      closeBtn:  document.getElementById('audio-close'),
+      closeBtn: document.getElementById('audio-close'),
       catalog: songCatalog
-    });
-
-    // ---- about overlay ----
-    const aboutBtn     = document.getElementById('about-btn');
-    const aboutOverlay = document.getElementById('about-overlay');
-    const aboutClose   = document.getElementById('about-close');
-    aboutBtn.addEventListener('click',   () => aboutOverlay.classList.remove('overlay-hidden'));
-    aboutClose.addEventListener('click', () => aboutOverlay.classList.add('overlay-hidden'));
-    aboutOverlay.addEventListener('click', (e) => {
-      if (e.target === aboutOverlay) aboutOverlay.classList.add('overlay-hidden');
     });
 
     // initial paint

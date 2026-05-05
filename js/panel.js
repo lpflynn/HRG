@@ -32,9 +32,11 @@ window.HRPanel = (function () {
       ? era.regions.map(r => escape(r.name)).join(' · ')
       : (era.primaryCoords ? `${era.primaryCoords.lat.toFixed(2)}, ${era.primaryCoords.lng.toFixed(2)}` : '');
 
-    const commentaryHtml = isPlaceholder(era.commentary)
-      ? `<p class="era-commentary placeholder">[YOU WRITE — historical commentary drawn from your readings: ${escape(era.primaryReading || 'course readings')}.]</p>`
-      : `<p class="era-commentary">${escape(era.commentary)}</p>`;
+    const commentaryHtml = Array.isArray(era.commentary) && era.commentary.length
+      ? `<ul class="era-commentary">${era.commentary.map(b => `<li>${escape(b)}</li>`).join('')}</ul>`
+      : isPlaceholder(era.commentary)
+        ? `<p class="era-commentary placeholder">[YOU WRITE — historical commentary]</p>`
+        : `<p class="era-commentary">${escape(era.commentary)}</p>`;
 
     const statHtml = isPlaceholder(era.scaleStat)
       ? `<p class="era-stat placeholder">[YOU WRITE — scale statistic]</p>`
@@ -59,8 +61,6 @@ window.HRPanel = (function () {
       return `<button class="era-song-btn" data-song-id="${escape(songId)}">${escape(label)}</button>`;
     }).join('');
 
-    const sources = (era.sources || []).map(s => `<li>${isPlaceholder(s) ? '<span class="placeholder">[YOU CITE]</span>' : escape(s)}</li>`).join('');
-
     return `
       <h2 class="era-title">${escape(era.title || '[YOU WRITE: era title]')}</h2>
       <div class="era-span ${era.ongoing ? 'ongoing' : ''}">${escape(spanLabel)} &nbsp;·&nbsp; ${geographyLabel}</div>
@@ -81,16 +81,6 @@ window.HRPanel = (function () {
       ${songButtons ? `<section class="era-section">
         <h3>Listen</h3>
         <div class="era-songs">${songButtons}</div>
-      </section>` : ''}
-
-      <section class="era-section">
-        <h3>Reading</h3>
-        <p>${span(era.primaryReading)}</p>
-      </section>
-
-      ${sources ? `<section class="era-section">
-        <h3>Sources</h3>
-        <ul class="era-sources">${sources}</ul>
       </section>` : ''}
     `;
   }

@@ -1,19 +1,21 @@
-/* audio.js — minimal era-audio player.
-   Song catalog is provided at init (loaded from eras.json's "songCatalog" or built from era.songs).
-   Files live under assets/audio/<id>.mp3 (or whatever extension you provide).
+/* audio.js — era-audio player using Apple Music embeds.
+   Each song in eras.json's songCatalog has an `appleMusicUrl` field.
+   Paste the share link from Apple Music (... menu → Share → Copy Link).
+   Either music.apple.com/... or embed.music.apple.com/... is accepted.
 */
 
 window.HRAudio = (function () {
-  function create({ playerEl, audioEl, titleEl, eraEl, toggleBtn, closeBtn, catalog }) {
+  function toEmbedUrl(url) {
+    if (!url) return '';
+    if (url.includes('embed.music.apple.com')) return url;
+    return url.replace('music.apple.com', 'embed.music.apple.com');
+  }
+
+  function create({ playerEl, iframeEl, eraEl, closeBtn, catalog }) {
     let currentId = null;
-    let currentEraTitle = '';
 
     function show() { playerEl.classList.remove('audio-hidden'); }
     function hide() { playerEl.classList.add('audio-hidden'); }
-
-    function setIcon(playing) {
-      toggleBtn.innerHTML = playing ? '&#10074;&#10074;' : '&#9658;';
-    }
 
     function play(songId, eraTitle) {
       const song = catalog[songId];
@@ -21,51 +23,32 @@ window.HRAudio = (function () {
         console.warn(`[audio] unknown song id: ${songId}`);
         return;
       }
+      const embed = toEmbedUrl(song.appleMusicUrl);
+      if (!embed) {
+        console.warn(
+          `[audio] no appleMusicUrl set for "${songId}" (${song.title}). ` +
+          `Paste a music.apple.com share link into data/eras.json → songCatalog.`
+        );
+        return;
+      }
       if (currentId !== songId) {
         currentId = songId;
-        currentEraTitle = eraTitle || '';
-        audioEl.src = song.file || `assets/audio/${songId}.mp3`;
-        titleEl.textContent = `${song.title} — ${song.artist}`;
-        eraEl.textContent = eraTitle || '';
+        iframeEl.src = embed;
+        const label = `${song.title} — ${song.artist}`;
+        eraEl.textContent = eraTitle ? `${label} · ${eraTitle}` : label;
       }
-      audioEl.play().catch(err => {
-        console.warn('[audio] play blocked or file missing:', err.message);
-      });
-      setIcon(true);
       show();
     }
 
-    function pause() {
-      audioEl.pause();
-      setIcon(false);
-    }
-
-    function toggle() {
-      if (audioEl.paused) {
-        if (currentId) audioEl.play().catch(()=>{});
-        setIcon(!audioEl.paused);
-      } else {
-        audioEl.pause();
-        setIcon(false);
-      }
-    }
-
     function close() {
-      audioEl.pause();
-      audioEl.removeAttribute('src');
-      audioEl.load();
+      iframeEl.src = '';
       currentId = null;
       hide();
-      setIcon(false);
     }
 
-    audioEl.addEventListener('ended', () => setIcon(false));
-    audioEl.addEventListener('play',  () => setIcon(true));
-    audioEl.addEventListener('pause', () => setIcon(false));
-    toggleBtn.addEventListener('click', toggle);
     closeBtn.addEventListener('click', close);
 
-    return { play, pause, toggle, close };
+    return { play, close };
   }
 
   return { create };

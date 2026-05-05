@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Human Rights Globe — HIST/HRTS 3301</title>
+  <title>Human Rights Atlas — HIST/HRTS 3301</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -16,10 +16,9 @@
 
   <header id="title-bar">
     <div class="title-group">
-      <h1 class="project-title">[YOU WRITE: Project Title]</h1>
+      <h1 class="project-title">Human Rights Atlas</h1>
       <p class="project-subtitle">HIST/HRTS 3301 &middot; America&rsquo;s Dilemma: The Struggle for Human Rights</p>
     </div>
-    <button id="about-btn" class="ghost-btn" type="button" aria-label="About this project">About</button>
   </header>
 
   <main>
@@ -31,27 +30,19 @@
     </aside>
 
     <div id="audio-player" class="audio-hidden" aria-label="Audio player">
-      <div class="audio-meta">
-        <div class="audio-title" id="audio-title"></div>
+      <div class="audio-header">
         <div class="audio-era" id="audio-era"></div>
-      </div>
-      <audio id="audio-element" preload="none"></audio>
-      <div class="audio-controls">
-        <button id="audio-toggle" class="audio-btn" type="button" aria-label="Play/pause">&#9658;</button>
         <button id="audio-close" class="audio-btn audio-close" type="button" aria-label="Close audio">&times;</button>
       </div>
+      <iframe
+        id="audio-iframe"
+        allow="autoplay *; encrypted-media *;"
+        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+        frameborder="0"
+        loading="lazy"
+      ></iframe>
     </div>
 
-    <div id="about-overlay" class="overlay-hidden" role="dialog" aria-modal="true" aria-labelledby="about-title">
-      <div class="overlay-card">
-        <button id="about-close" class="panel-close" type="button" aria-label="Close">&times;</button>
-        <h2 id="about-title">About this project</h2>
-        <div class="about-body">
-          <p>[YOU WRITE: A short paragraph describing the project, its argument, and your relationship to the course.]</p>
-          <p class="about-credit">Built for HIST/HRTS 3301, Prof. Rick Halperin &middot; SMU &middot; May 2026.</p>
-        </div>
-      </div>
-    </div>
   </main>
 
   <footer id="timeline-bar">
@@ -63,7 +54,7 @@
         id="timeline-slider"
         type="range"
         min="1400"
-        max="2030"
+        max="2026"
         step="1"
         value="1400"
         aria-label="Year"

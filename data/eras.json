@@ -1,241 +1,972 @@
 {
   "_README": "Every field marked [YOU WRITE] or [YOU CITE] is yours to fill in from the course readings and your notes. The course prohibits generative AI on submitted work — keep timestamped drafts of all prose. Coordinates and dates are pre-filled as a starting reference; verify against your readings and adjust as you see fit.",
-
+  "_songCatalogNote": "Each song uses an Apple Music embed. Paste the share link from Apple Music (... menu → Share → Copy Link) into appleMusicUrl. Either music.apple.com/... or embed.music.apple.com/... form works; the player auto-converts.",
   "songCatalog": {
-    "strange-fruit":          { "title": "Strange Fruit",                "artist": "Billie Holiday",    "file": "assets/audio/strange-fruit.mp3" },
-    "a-change-is-gonna-come": { "title": "A Change Is Gonna Come",       "artist": "Sam Cooke",         "file": "assets/audio/a-change-is-gonna-come.mp3" },
-    "mississippi-goddam":     { "title": "Mississippi Goddam",           "artist": "Nina Simone",       "file": "assets/audio/mississippi-goddam.mp3" },
-    "we-shall-overcome":      { "title": "We Shall Overcome",            "artist": "Pete Seeger",       "file": "assets/audio/we-shall-overcome.mp3" },
-    "lift-every-voice":       { "title": "Lift Every Voice and Sing",    "artist": "Cobbs",             "file": "assets/audio/lift-every-voice.mp3" },
-    "people-get-ready":       { "title": "People Get Ready",             "artist": "The Impressions",   "file": "assets/audio/people-get-ready.mp3" },
-    "abraham-martin-john":    { "title": "Abraham, Martin and John",     "artist": "Dion",              "file": "assets/audio/abraham-martin-john.mp3" },
-    "ohio":                   { "title": "Ohio",                         "artist": "CSNY",              "file": "assets/audio/ohio.mp3" },
-    "buffalo-gone":           { "title": "Now That the Buffalo's Gone",  "artist": "Buffy Sainte-Marie","file": "assets/audio/buffalo-gone.mp3" },
-    "deportee":               { "title": "Deportee (Plane Wreck at Los Gatos)", "artist": "Woody Guthrie", "file": "assets/audio/deportee.mp3" },
-    "this-land":              { "title": "This Land Is Your Land",       "artist": "Woody Guthrie",     "file": "assets/audio/this-land.mp3" },
-    "redemption-song":        { "title": "Redemption Song",              "artist": "Bob Marley",        "file": "assets/audio/redemption-song.mp3" },
-    "derecho-de-vivir":       { "title": "El derecho de vivir en paz",   "artist": "Víctor Jara",       "file": "assets/audio/derecho-de-vivir.mp3" },
-    "biko":                   { "title": "Biko",                         "artist": "Peter Gabriel",     "file": "assets/audio/biko.mp3" },
-    "sunday-bloody-sunday":   { "title": "Sunday Bloody Sunday",         "artist": "U2",                "file": "assets/audio/sunday-bloody-sunday.mp3" },
-    "zombie":                 { "title": "Zombie",                       "artist": "The Cranberries",   "file": "assets/audio/zombie.mp3" },
-    "blowin-in-the-wind":     { "title": "Blowin' in the Wind",          "artist": "Bob Dylan",         "file": "assets/audio/blowin-in-the-wind.mp3" },
-    "times-they-are-changin": { "title": "The Times They Are A-Changin'","artist": "Bob Dylan",         "file": "assets/audio/times-they-are-changin.mp3" },
-    "donna-donna":            { "title": "Donna Donna",                  "artist": "Joan Baez",         "file": "assets/audio/donna-donna.mp3" }
+    "strange-fruit": {
+      "title": "Strange Fruit",
+      "artist": "Billie Holiday",
+      "appleMusicUrl": "https://music.apple.com/us/song/strange-fruit/1445229998"
+    },
+    "buffalo-gone": {
+      "title": "Now That the Buffalo's Gone",
+      "artist": "Buffy Sainte-Marie",
+      "appleMusicUrl": "https://music.apple.com/us/song/now-that-the-buffalos-gone/711675041"
+    },
+    "we-shall-overcome": {
+      "title": "We Shall Overcome",
+      "artist": "Pete Seeger",
+      "appleMusicUrl": "https://music.apple.com/us/song/we-shall-overcome/639905953"
+    },
+    "donna-donna": {
+      "title": "Donna Donna",
+      "artist": "Joan Baez",
+      "appleMusicUrl": "https://music.apple.com/us/song/donna-donna/712143035"
+    },
+    "enola-gay": {
+      "title": "Enola Gay",
+      "artist": "OMD",
+      "appleMusicUrl": "https://music.apple.com/us/song/enola-gay/714551817"
+    },
+    "holiday-in-cambodia": {
+      "title": "Holiday in Cambodia",
+      "artist": "Dead Kennedys",
+      "appleMusicUrl": "https://music.apple.com/us/song/holiday-in-cambodia/1760852796"
+    },
+    "mercy-seat": {
+      "title": "The Mercy Seat",
+      "artist": "Nick Cave & The Bad Seeds",
+      "appleMusicUrl": "https://music.apple.com/us/song/the-mercy-seat-2010-remaster/1435938737"
+    },
+    "deportee": {
+      "title": "Deportee (Plane Wreck at Los Gatos)",
+      "artist": "Woody Guthrie",
+      "appleMusicUrl": "https://music.apple.com/us/song/deportee-woodys-home-tape/1821320197"
+    },
+    "blowin-in-the-wind": {
+      "title": "Blowin' in the Wind",
+      "artist": "Bob Dylan",
+      "appleMusicUrl": "https://music.apple.com/us/song/blowin-in-the-wind/192688540"
+    },
+    "biko": {
+      "title": "Biko",
+      "artist": "Peter Gabriel",
+      "appleMusicUrl": "https://music.apple.com/us/song/biko/986713204"
+    },
+    "ohio": {
+      "title": "Ohio",
+      "artist": "Crosby, Stills, Nash & Young",
+      "appleMusicUrl": "https://music.apple.com/us/song/ohio/322842576"
+    },
+    "sunday-bloody-sunday": {
+      "title": "Sunday Bloody Sunday",
+      "artist": "U2",
+      "appleMusicUrl": "https://music.apple.com/us/song/sunday-bloody-sunday/1440729870"
+    },
+    "derecho-de-vivir": {
+      "title": "El derecho de vivir en paz",
+      "artist": "Víctor Jara",
+      "appleMusicUrl": "https://music.apple.com/us/song/el-derecho-de-vivir-en-paz/1446646079"
+    },
+    "miss-sarajevo": {
+      "title": "Miss Sarajevo",
+      "artist": "Passengers (U2 & Brian Eno) feat. Luciano Pavarotti",
+      "appleMusicUrl": "https://music.apple.com/us/song/miss-sarajevo-feat-luciano-pavarotti/1443791379"
+    },
+    "million-voices": {
+      "title": "Million Voices",
+      "artist": "Wyclef Jean",
+      "appleMusicUrl": "https://music.apple.com/us/song/million-voices-feat-african-childrens-choir/268625579"
+    },
+    "american-idiot": {
+      "title": "American Idiot",
+      "artist": "Green Day",
+      "appleMusicUrl": "https://music.apple.com/us/song/american-idiot/207192732"
+    }
   },
-
   "eras": [
     {
       "id": "slavery",
-      "countries": ["USA"],
+      "countries": [
+        "USA"
+      ],
       "title": "American Slavery",
       "startYear": 1619,
       "endYear": 1877,
       "ongoing": false,
-      "primaryCoords": { "lat": 36.85, "lng": -76.29 },
+      "primaryCoords": {
+        "lat": 36.85,
+        "lng": -76.29
+      },
       "regions": [
-        { "name": "Point Comfort, VA",  "lat": 37.00, "lng": -76.30 },
-        { "name": "Charleston, SC",     "lat": 32.78, "lng": -79.93 },
-        { "name": "New Orleans, LA",    "lat": 29.95, "lng": -90.07 }
+        {
+          "name": "Point Comfort, VA",
+          "lat": 37.0,
+          "lng": -76.3
+        },
+        {
+          "name": "Charleston, SC",
+          "lat": 32.78,
+          "lng": -79.93
+        },
+        {
+          "name": "New Orleans, LA",
+          "lat": 29.95,
+          "lng": -90.07
+        }
       ],
-      "color": "#d4a04a",
-      "songs": ["strange-fruit", "a-change-is-gonna-come", "lift-every-voice"],
-      "primaryReading": "Kendi, Stamped from the Beginning",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE: scale statistic, e.g. duration / number of people / etc.]",
+      "color": "#e0a23e",
+      "songs": [
+        "strange-fruit"
+      ],
+      "commentary": [
+        "~1.8 million died on the Middle Passage",
+        "~4 million enslaved in the U.S. by 1860",
+        "Resisters: Frederick Douglass, Harriet Tubman, Nat Turner, Denmark Vesey, John Brown",
+        "Ended legally with the 13th Amendment (1865); Black Codes, convict leasing, and Jim Crow followed"
+      ],
+      "shortLabel": "American Slavery",
+      "scaleStat": "~12.5 million Africans trafficked across the Atlantic (1525-1866)",
       "images": [],
       "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "events": [
+        {
+          "year": 1619,
+          "name": "Point Comfort",
+          "lat": 37.0,
+          "lng": -76.3,
+          "summary": "The English ship White Lion lands ~20 enslaved Africans at Point Comfort, VA — the conventional starting point of African slavery in British North America."
+        },
+        {
+          "year": 1739,
+          "name": "Stono Rebellion",
+          "lat": 32.66,
+          "lng": -80.1,
+          "summary": "The largest slave uprising in the 13 colonies; ~20 enslaved people killed and triggered the harsh 1740 Negro Act."
+        },
+        {
+          "year": 1787,
+          "name": "Three-Fifths Compromise",
+          "lat": 39.95,
+          "lng": -75.15,
+          "summary": "The Constitutional Convention in Philadelphia counts each enslaved person as 3/5 of a person for representation — embedding slavery into US founding law."
+        },
+        {
+          "year": 1791,
+          "name": "Haitian Revolution",
+          "lat": 19.76,
+          "lng": -72.2,
+          "summary": "Enslaved people in Saint-Domingue revolt and ultimately found Haiti (1804). Kendi tracks how white slaveholders in the US weaponized fear of 'another Haiti' to tighten slave codes."
+        },
+        {
+          "year": 1822,
+          "name": "Denmark Vesey",
+          "lat": 32.78,
+          "lng": -79.93,
+          "summary": "Free Black carpenter Denmark Vesey's planned Charleston uprising is uncovered and crushed; 35 executed. Charleston builds the Citadel in response."
+        },
+        {
+          "year": 1831,
+          "name": "Nat Turner's Rebellion",
+          "lat": 36.72,
+          "lng": -77.1,
+          "summary": "Nat Turner leads the deadliest slave revolt in US history in Southampton County, VA — ~60 white casualties; brutal reprisals follow and Southern states pass laws banning Black literacy and assembly."
+        },
+        {
+          "year": 1857,
+          "name": "Dred Scott v. Sandford",
+          "lat": 38.63,
+          "lng": -90.19,
+          "summary": "Supreme Court rules Black Americans 'had no rights which the white man was bound to respect' and Congress cannot bar slavery in territories — pushing the country toward civil war."
+        },
+        {
+          "year": 1859,
+          "name": "Harpers Ferry",
+          "lat": 39.32,
+          "lng": -77.74,
+          "summary": "Abolitionist John Brown raids the federal armory at Harpers Ferry attempting to arm an enslaved uprising. He is captured and hanged; the raid polarizes North and South."
+        },
+        {
+          "year": 1863,
+          "name": "Emancipation Proclamation",
+          "lat": 38.9,
+          "lng": -77.04,
+          "summary": "Lincoln's wartime order declares enslaved people in Confederate states 'forever free' — recasts the Civil War as a war over slavery and authorizes Black enlistment."
+        },
+        {
+          "year": 1865,
+          "name": "13th Amendment",
+          "lat": 37.38,
+          "lng": -78.79,
+          "summary": "Lee surrenders at Appomattox; the 13th Amendment is ratified in December, abolishing slavery 'except as a punishment for crime' — a clause Kendi traces directly into convict leasing and Jim Crow."
+        }
+      ]
     },
     {
       "id": "native-dispossession",
-      "countries": ["USA", "CAN"],
+      "countries": [
+        "USA",
+        "CAN"
+      ],
       "title": "Native American Dispossession",
       "startYear": 1492,
       "endYear": 2030,
       "ongoing": true,
-      "primaryCoords": { "lat": 43.79, "lng": -102.24 },
+      "primaryCoords": {
+        "lat": 43.79,
+        "lng": -102.24
+      },
       "regions": [
-        { "name": "Pine Ridge, SD",     "lat": 43.02, "lng": -102.55 },
-        { "name": "Wounded Knee, SD",   "lat": 43.14, "lng": -102.36 },
-        { "name": "Trail of Tears (Cherokee, NC → OK)", "lat": 35.46, "lng": -97.52 },
-        { "name": "Standing Rock, ND",  "lat": 46.10, "lng": -100.83 }
+        {
+          "name": "Pine Ridge, SD",
+          "lat": 43.02,
+          "lng": -102.55
+        },
+        {
+          "name": "Wounded Knee, SD",
+          "lat": 43.14,
+          "lng": -102.36
+        },
+        {
+          "name": "Trail of Tears (Cherokee, NC → OK)",
+          "lat": 35.46,
+          "lng": -97.52
+        },
+        {
+          "name": "Standing Rock, ND",
+          "lat": 46.1,
+          "lng": -100.83
+        }
       ],
-      "color": "#6b8e9e",
-      "songs": ["buffalo-gone"],
-      "primaryReading": "Dunbar-Ortiz, An Indigenous Peoples' History of the United States",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#c46532",
+      "songs": [
+        "buffalo-gone"
+      ],
+      "commentary": [
+        "Trail of Tears (1838-39): ~4,000 of 16,000 Cherokee died en route",
+        "Wounded Knee Massacre (1890): ~250-300 Lakota killed",
+        "~90 million acres taken under the 1887 Dawes Act",
+        "~150,000 Native children forced into federal boarding schools"
+      ],
+      "shortLabel": "Native Dispossession",
+      "scaleStat": "~5-15 million pre-contact reduced to ~250,000 by 1900",
       "images": [],
       "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "skipDwell": true
     },
     {
       "id": "segregation-civil-rights",
-      "countries": ["USA"],
+      "countries": [
+        "USA"
+      ],
       "title": "Segregation & Civil Rights",
       "startYear": 1877,
       "endYear": 2030,
       "ongoing": true,
-      "primaryCoords": { "lat": 32.37, "lng": -86.30 },
+      "primaryCoords": {
+        "lat": 32.37,
+        "lng": -86.3
+      },
       "regions": [
-        { "name": "Montgomery, AL",  "lat": 32.37, "lng": -86.30 },
-        { "name": "Selma, AL",       "lat": 32.41, "lng": -87.02 },
-        { "name": "Birmingham, AL",  "lat": 33.52, "lng": -86.81 },
-        { "name": "Memphis, TN",     "lat": 35.15, "lng": -90.05 },
-        { "name": "Kent State, OH",  "lat": 41.15, "lng": -81.34 }
+        {
+          "name": "Montgomery, AL",
+          "lat": 32.37,
+          "lng": -86.3
+        },
+        {
+          "name": "Selma, AL",
+          "lat": 32.41,
+          "lng": -87.02
+        },
+        {
+          "name": "Birmingham, AL",
+          "lat": 33.52,
+          "lng": -86.81
+        },
+        {
+          "name": "Memphis, TN",
+          "lat": 35.15,
+          "lng": -90.05
+        },
+        {
+          "name": "Kent State, OH",
+          "lat": 41.15,
+          "lng": -81.34
+        }
       ],
-      "color": "#d4a04a",
-      "songs": ["mississippi-goddam", "we-shall-overcome", "people-get-ready", "abraham-martin-john", "ohio", "a-change-is-gonna-come"],
-      "primaryReading": "Kendi, Stamped from the Beginning",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#e16c95",
+      "songs": [
+        "we-shall-overcome"
+      ],
+      "commentary": [
+        "~6 million Black Americans moved North in the Great Migration",
+        "Killed: Emmett Till, Medgar Evers, Malcolm X, MLK, the four girls in the 16th Street Baptist Church bombing",
+        "Leaders: King, Rosa Parks, Ella Baker, John Lewis, Fannie Lou Hamer",
+        "Segregationists: Bull Connor, George Wallace, Orval Faubus"
+      ],
+      "shortLabel": "Segregation & Civil Rights",
+      "scaleStat": "~4,743 documented lynchings (1882-1968)",
       "images": [],
-      "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "imageCaptions": []
     },
     {
       "id": "eugenics",
-      "countries": ["USA", "DEU"],
+      "countries": [
+        "USA",
+        "DEU"
+      ],
       "title": "Eugenics",
       "startYear": 1900,
       "endYear": 1945,
       "ongoing": false,
-      "primaryCoords": { "lat": 40.86, "lng": -73.47 },
+      "primaryCoords": {
+        "lat": 40.86,
+        "lng": -73.47
+      },
       "regions": [
-        { "name": "Cold Spring Harbor, NY (ERO)", "lat": 40.86, "lng": -73.47 },
-        { "name": "Lynchburg, VA (Buck v. Bell)", "lat": 37.41, "lng": -79.14 },
-        { "name": "Berlin, Germany",              "lat": 52.52, "lng": 13.41 }
+        {
+          "name": "Cold Spring Harbor, NY (ERO)",
+          "lat": 40.86,
+          "lng": -73.47
+        },
+        {
+          "name": "Lynchburg, VA (Buck v. Bell)",
+          "lat": 37.41,
+          "lng": -79.14
+        },
+        {
+          "name": "Berlin, Germany",
+          "lat": 52.52,
+          "lng": 13.41
+        }
       ],
-      "color": "#d4a04a",
+      "color": "#a4c4e0",
       "songs": [],
-      "primaryReading": "Black, War Against the Weak",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "commentary": [
+        "T4 program murdered ~250,000-300,000 disabled people in Germany",
+        "Buck v. Bell (1927): Supreme Court upheld forced sterilization 8-1",
+        "U.S. architects: Charles Davenport, Harry Laughlin, Madison Grant",
+        "Targeted: poor whites, Black, Latina, and Native women, the disabled, immigrants"
+      ],
+      "shortLabel": "Eugenics",
+      "scaleStat": "~70,000 sterilized in the U.S.; ~400,000 sterilized in Nazi Germany",
       "images": [],
       "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "events": [
+        {
+          "year": 1907,
+          "name": "Indiana Sterilization Law",
+          "lat": 39.7684,
+          "lng": -86.1581,
+          "summary": "Indiana becomes the first U.S. state — and the first jurisdiction in the world — to enact a compulsory sterilization law, targeting 'confirmed criminals, idiots, rapists and imbeciles' in state custody."
+        },
+        {
+          "year": 1909,
+          "name": "California Sterilization Act",
+          "lat": 38.5816,
+          "lng": -121.4944,
+          "summary": "California passes its sterilization law and goes on to perform roughly 20,000 forced sterilizations through 1979 — one-third of the U.S. total. Coercive sterilization of Latina inmates in CA prisons continued until 2010."
+        },
+        {
+          "year": 1910,
+          "name": "Eugenics Record Office",
+          "lat": 40.8617,
+          "lng": -73.469,
+          "summary": "Charles Davenport founds the ERO at Cold Spring Harbor, NY with Carnegie Institution and Harriman funding. For three decades it drives American eugenic research, propaganda, and policy."
+        },
+        {
+          "year": 1916,
+          "name": "Passing of the Great Race",
+          "lat": 40.7831,
+          "lng": -73.9712,
+          "summary": "Madison Grant publishes The Passing of the Great Race, popularizing 'Nordic' racial supremacy through Charles Scribner's Sons in New York. Hitler later called the book his 'Bible.'"
+        },
+        {
+          "year": 1924,
+          "name": "Virginia Sterilization Act",
+          "lat": 37.5407,
+          "lng": -77.436,
+          "summary": "Virginia passes the Sterilization Act and the Racial Integrity Act in the same week — paired laws to legalize forced sterilization and outlaw interracial marriage on a 'one drop' rule."
+        },
+        {
+          "year": 1924,
+          "name": "Johnson-Reed Immigration Act",
+          "lat": 38.8895,
+          "lng": -77.0353,
+          "summary": "Congress sets racially calibrated immigration quotas drawn directly from ERO superintendent Harry Laughlin's eugenic testimony, slamming shut U.S. borders to Southern and Eastern Europeans, Jews, and Asians."
+        },
+        {
+          "year": 1927,
+          "name": "Buck v. Bell",
+          "lat": 37.4138,
+          "lng": -79.1422,
+          "summary": "Supreme Court upholds Virginia's forced sterilization of Carrie Buck 8–1. Justice Oliver Wendell Holmes: 'Three generations of imbeciles are enough.' Cited by Nazi defense attorneys at Nuremberg."
+        },
+        {
+          "year": 1933,
+          "name": "Nazi Sterilization Law",
+          "lat": 52.52,
+          "lng": 13.405,
+          "summary": "Nazi Germany passes the 'Law for the Prevention of Hereditarily Diseased Offspring,' modeled on Laughlin's American template. About 400,000 Germans were sterilized by 1945."
+        },
+        {
+          "year": 1939,
+          "name": "Aktion T4",
+          "lat": 52.5093,
+          "lng": 13.365,
+          "summary": "Hitler authorizes a covert mass-killing program of disabled Germans run from Tiergartenstraße 4 in Berlin. ~70,000 murdered by gas — providing the technical methods, personnel, and infrastructure later used in the Holocaust."
+        },
+        {
+          "year": 1942,
+          "name": "Skinner v. Oklahoma",
+          "lat": 35.4676,
+          "lng": -97.5164,
+          "summary": "Supreme Court unanimously strikes down Oklahoma's Habitual Criminal Sterilization Act, recognizing procreation as a fundamental right and beginning the legal retreat from Buck v. Bell."
+        }
+      ]
     },
     {
       "id": "holocaust",
-      "countries": ["DEU", "POL", "UKR", "BLR", "FRA", "NLD", "BEL", "CZE", "AUT", "HUN", "ROU", "SVK", "LTU", "LVA", "EST", "GRC", "ITA", "SRB", "HRV", "BIH", "NOR", "DNK"],
+      "countries": [
+        "DEU",
+        "POL",
+        "UKR",
+        "BLR",
+        "FRA",
+        "NLD",
+        "BEL",
+        "CZE",
+        "AUT",
+        "HUN",
+        "ROU",
+        "SVK",
+        "LTU",
+        "LVA",
+        "EST",
+        "GRC",
+        "ITA",
+        "SRB",
+        "HRV",
+        "BIH",
+        "NOR",
+        "DNK"
+      ],
       "title": "The Holocaust",
       "startYear": 1933,
       "endYear": 1945,
       "ongoing": false,
-      "primaryCoords": { "lat": 50.04, "lng": 19.18 },
+      "primaryCoords": {
+        "lat": 50.04,
+        "lng": 19.18
+      },
       "regions": [
-        { "name": "Auschwitz-Birkenau, Poland", "lat": 50.04, "lng": 19.18 },
-        { "name": "Treblinka, Poland",         "lat": 52.63, "lng": 22.05 },
-        { "name": "Babi Yar, Kyiv, Ukraine",   "lat": 50.47, "lng": 30.45 },
-        { "name": "Berlin, Germany",           "lat": 52.52, "lng": 13.41 }
+        {
+          "name": "Auschwitz-Birkenau, Poland",
+          "lat": 50.04,
+          "lng": 19.18
+        },
+        {
+          "name": "Treblinka, Poland",
+          "lat": 52.63,
+          "lng": 22.05
+        },
+        {
+          "name": "Babi Yar, Kyiv, Ukraine",
+          "lat": 50.47,
+          "lng": 30.45
+        },
+        {
+          "name": "Berlin, Germany",
+          "lat": 52.52,
+          "lng": 13.41
+        }
       ],
-      "color": "#d4a04a",
-      "songs": ["donna-donna"],
-      "primaryReading": "Friedlander, The Origins of Nazi Genocide; Power, A Problem from Hell",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#8c95a3",
+      "songs": [
+        "donna-donna"
+      ],
+      "commentary": [
+        "~5 million other victims: Soviet POWs, Poles, Roma, disabled, gay men, political prisoners",
+        "Architects: Hitler, Himmler, Heydrich, Eichmann, Höss",
+        "Killing centers: Auschwitz (~1.1M), Treblinka (~900K), Belzec, Sobibor",
+        "Raphael Lemkin coined the word 'genocide' in 1944"
+      ],
+      "shortLabel": "Holocaust",
+      "scaleStat": "~6 million Jews murdered — about 2/3 of European Jewry",
       "images": [],
       "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "events": [
+        {
+          "year": 1933,
+          "name": "Dachau",
+          "lat": 48.2697,
+          "lng": 11.4658,
+          "summary": "The first Nazi concentration camp, opened 22 March 1933 outside Munich; the organizational and architectural prototype for the entire SS camp system."
+        },
+        {
+          "year": 1936,
+          "name": "Sachsenhausen",
+          "lat": 52.7656,
+          "lng": 13.2641,
+          "summary": "Headquarters of the SS Concentration Camp Inspectorate north of Berlin; held political prisoners, Soviet POWs, and homosexual men."
+        },
+        {
+          "year": 1937,
+          "name": "Buchenwald",
+          "lat": 51.024,
+          "lng": 11.2504,
+          "summary": "Massive forced-labor camp near Weimar; more than 56,000 prisoners died here. Liberated by US forces 11 April 1945."
+        },
+        {
+          "year": 1938,
+          "name": "Mauthausen",
+          "lat": 48.258,
+          "lng": 14.5004,
+          "summary": "Granite-quarry slave-labor camp in Austria, classified by the SS as 'Stufe III' — the harshest category. Roughly 90,000 prisoners murdered."
+        },
+        {
+          "year": 1939,
+          "name": "Ravensbrück",
+          "lat": 53.1894,
+          "lng": 13.1714,
+          "summary": "Largest concentration camp for women in Nazi Germany; site of forced sterilization and medical experiments. ~30,000–50,000 dead."
+        },
+        {
+          "year": 1940,
+          "name": "Auschwitz-Birkenau",
+          "lat": 50.0356,
+          "lng": 19.1781,
+          "summary": "Combined concentration and extermination camp in occupied Poland. About 1.1 million people were murdered here, the vast majority Jews gassed on arrival."
+        },
+        {
+          "year": 1940,
+          "name": "Bergen-Belsen",
+          "lat": 52.7575,
+          "lng": 9.9079,
+          "summary": "Initially a POW and exchange camp; collapsed into mass death from typhus and starvation by 1945. Anne Frank died here weeks before British liberation in April 1945."
+        },
+        {
+          "year": 1941,
+          "name": "Chełmno (Kulmhof)",
+          "lat": 52.153,
+          "lng": 18.7161,
+          "summary": "The first dedicated Nazi extermination camp, using mobile gas vans. About 152,000 Jews and 4,300 Romani were murdered."
+        },
+        {
+          "year": 1941,
+          "name": "Majdanek",
+          "lat": 51.2221,
+          "lng": 22.5995,
+          "summary": "Concentration and extermination camp on the outskirts of Lublin; ~78,000 dead. Captured nearly intact by the Red Army in July 1944 — first major camp seen by the Allies."
+        },
+        {
+          "year": 1942,
+          "name": "Bełżec",
+          "lat": 50.3812,
+          "lng": 23.4291,
+          "summary": "First of the three Operation Reinhard camps; about 500,000 Jews killed in nine months. Dismantled by the Nazis in 1943 to hide the evidence."
+        },
+        {
+          "year": 1942,
+          "name": "Sobibór",
+          "lat": 51.4456,
+          "lng": 23.5947,
+          "summary": "Operation Reinhard death camp; ~250,000 murdered. Site of a successful prisoner uprising on 14 October 1943 — one of only two camp revolts of the war."
+        },
+        {
+          "year": 1942,
+          "name": "Treblinka",
+          "lat": 52.6307,
+          "lng": 22.0552,
+          "summary": "Operation Reinhard death camp east of Warsaw; ~900,000 Jews — including most of the Warsaw Ghetto — murdered in roughly 14 months."
+        }
+      ]
     },
     {
       "id": "japanese-pacific-atrocities",
-      "countries": ["CHN", "PHL", "KOR", "MMR", "IDN", "MYS", "SGP", "VNM"],
+      "countries": [
+        "CHN",
+        "PHL",
+        "KOR",
+        "MMR",
+        "IDN",
+        "MYS",
+        "SGP",
+        "VNM"
+      ],
       "title": "Japanese Biological Warfare & Pacific Atrocities",
       "startYear": 1932,
       "endYear": 1945,
       "ongoing": false,
-      "primaryCoords": { "lat": 45.75, "lng": 126.63 },
+      "primaryCoords": {
+        "lat": 45.75,
+        "lng": 126.63
+      },
       "regions": [
-        { "name": "Pingfang, Harbin (Unit 731)", "lat": 45.60, "lng": 126.63 },
-        { "name": "Nanjing, China",              "lat": 32.06, "lng": 118.80 },
-        { "name": "Manila, Philippines",         "lat": 14.60, "lng": 120.98 }
+        {
+          "name": "Pingfang, Harbin (Unit 731)",
+          "lat": 45.6,
+          "lng": 126.63
+        },
+        {
+          "name": "Nanjing, China",
+          "lat": 32.06,
+          "lng": 118.8
+        },
+        {
+          "name": "Manila, Philippines",
+          "lat": 14.6,
+          "lng": 120.98
+        }
       ],
-      "color": "#d4a04a",
-      "songs": [],
-      "primaryReading": "Harris, Factories of Death",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#c0392b",
+      "songs": [
+        "enola-gay"
+      ],
+      "commentary": [
+        "Unit 731 (Shiro Ishii): ~3,000 killed in experiments; ~200,000+ died from biological field tests",
+        "~200,000 women enslaved as 'comfort women' — mostly Korean and Chinese",
+        "Bataan Death March (1942): ~7,000-10,000 American and Filipino POWs killed",
+        "Unit 731 researchers received U.S. immunity in 1945 in exchange for their data"
+      ],
+      "shortLabel": "Unit 731 / Pacific",
+      "scaleStat": "~200,000-300,000 killed at Nanjing; millions of Asian civilian deaths",
       "images": [],
       "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "events": [
+        {
+          "year": 1932,
+          "name": "Unit Tōgō",
+          "lat": 45.13,
+          "lng": 127.59,
+          "summary": "Imperial Japan's first dedicated biological warfare facility, near Beiyinhe in Manchuria. ~1,000 Chinese prisoners experimented on before destruction in 1937."
+        },
+        {
+          "year": 1936,
+          "name": "Unit 731",
+          "lat": 45.62,
+          "lng": 126.66,
+          "summary": "Major BW research and production complex at Pingfang under Gen. Shirō Ishii; at least 3,000 prisoners ('logs') killed in vivisection, frostbite, plague, and anthrax tests."
+        },
+        {
+          "year": 1937,
+          "name": "Nanking Massacre",
+          "lat": 32.06,
+          "lng": 118.8,
+          "summary": "Six-week mass killing and rape after the fall of the Chinese capital; ~200,000–300,000 dead."
+        },
+        {
+          "year": 1940,
+          "name": "Ningbo Plague Attack",
+          "lat": 29.87,
+          "lng": 121.55,
+          "summary": "Unit 731 drops plague-infected fleas from aircraft over the city — among the first deliberate biological attacks on a civilian population in modern history."
+        },
+        {
+          "year": 1942,
+          "name": "Bataan Death March",
+          "lat": 14.62,
+          "lng": 120.48,
+          "summary": "~76,000 American and Filipino POWs forced to march 65 miles to internment; thousands die en route from beatings, beheadings, and dehydration."
+        },
+        {
+          "year": 1944,
+          "name": "Comfort Women System",
+          "lat": 37.57,
+          "lng": 126.98,
+          "summary": "State-organized military sexual slavery at peak; 50,000–200,000 women across occupied Asia, roughly 80% Korean."
+        },
+        {
+          "year": 1945,
+          "name": "US Immunity Deal",
+          "lat": 35.68,
+          "lng": 139.69,
+          "summary": "MacArthur's occupation grants Ishii and Unit 731 leadership immunity in exchange for their biological warfare data — the central thesis of Harris's Factories of Death."
+        }
+      ]
     },
     {
       "id": "cambodia",
-      "countries": ["KHM"],
+      "countries": [
+        "KHM"
+      ],
       "title": "Cambodian Genocide",
       "startYear": 1975,
       "endYear": 1979,
       "ongoing": false,
-      "primaryCoords": { "lat": 11.55, "lng": 104.92 },
+      "primaryCoords": {
+        "lat": 11.55,
+        "lng": 104.92
+      },
       "regions": [
-        { "name": "Phnom Penh, Cambodia",         "lat": 11.55, "lng": 104.92 },
-        { "name": "Tuol Sleng (S-21)",            "lat": 11.55, "lng": 104.92 },
-        { "name": "Choeung Ek (Killing Fields)",  "lat": 11.48, "lng": 104.90 }
+        {
+          "name": "Phnom Penh, Cambodia",
+          "lat": 11.55,
+          "lng": 104.92
+        },
+        {
+          "name": "Tuol Sleng (S-21)",
+          "lat": 11.55,
+          "lng": 104.92
+        },
+        {
+          "name": "Choeung Ek (Killing Fields)",
+          "lat": 11.48,
+          "lng": 104.9
+        }
       ],
-      "color": "#d4a04a",
-      "songs": [],
-      "primaryReading": "Kiernan, The Pol Pot Regime; Power, A Problem from Hell",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#6db64c",
+      "songs": [
+        "holiday-in-cambodia"
+      ],
+      "commentary": [
+        "S-21 prison (Tuol Sleng): ~14,000-20,000 prisoners; only ~12 known survivors",
+        "Leaders: Pol Pot, Nuon Chea, Khieu Samphan, 'Comrade Duch'",
+        "Targeted: intellectuals, monks, ethnic Vietnamese, Cham Muslims, urban dwellers",
+        "U.S. bombing (1969-73) helped destabilize the country"
+      ],
+      "shortLabel": "Cambodian Genocide",
+      "scaleStat": "~1.7-2 million dead — roughly 1 in 4 Cambodians — in under 4 years",
       "images": [],
       "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "events": [
+        {
+          "year": 1975,
+          "name": "Phnom Penh Falls",
+          "lat": 11.55,
+          "lng": 104.92,
+          "summary": "Khmer Rouge enters the capital on April 17; within hours forces ~2 million residents to evacuate to the countryside on threat of execution."
+        },
+        {
+          "year": 1975,
+          "name": "S-21 Tuol Sleng",
+          "lat": 11.5497,
+          "lng": 104.9176,
+          "summary": "Former high school converted into the regime's central interrogation prison; ~14,000 detained, only 7 known survivors."
+        },
+        {
+          "year": 1976,
+          "name": "Choeung Ek",
+          "lat": 11.4838,
+          "lng": 104.9019,
+          "summary": "'Killing fields' execution site outside Phnom Penh; over 8,000 mass-grave victims excavated, including children killed by being beaten against trees."
+        },
+        {
+          "year": 1977,
+          "name": "Eastern Zone Purges",
+          "lat": 11.08,
+          "lng": 105.8,
+          "summary": "Pol Pot accuses the Eastern Zone of disloyalty; ~100,000 cadres and civilians executed in internal purges through 1978."
+        },
+        {
+          "year": 1978,
+          "name": "Cham Massacres",
+          "lat": 12.0,
+          "lng": 105.45,
+          "summary": "Systematic targeting of the Muslim Cham minority — forced renunciation of religion, executions; roughly half the Cham population dead by 1979."
+        },
+        {
+          "year": 1979,
+          "name": "Vietnamese Liberation",
+          "lat": 11.5564,
+          "lng": 104.9282,
+          "summary": "Vietnamese forces capture Phnom Penh, ending the regime. Final toll: ~1.7–2.2 million dead, roughly 25% of the population."
+        }
+      ]
     },
     {
       "id": "death-penalty",
-      "countries": ["USA", "CHN", "IRN", "SAU", "EGY", "IRQ", "PAK", "VNM", "YEM", "BLR", "JPN", "BGD", "AFG", "PRK", "NGA"],
+      "countries": [
+        "USA",
+        "CHN",
+        "IRN",
+        "SAU",
+        "EGY",
+        "IRQ",
+        "PAK",
+        "VNM",
+        "YEM",
+        "BLR",
+        "JPN",
+        "BGD",
+        "AFG",
+        "PRK",
+        "NGA"
+      ],
       "title": "The Death Penalty",
       "startYear": 1900,
       "endYear": 2030,
       "ongoing": true,
-      "primaryCoords": { "lat": 30.72, "lng": -95.55 },
+      "primaryCoords": {
+        "lat": 30.72,
+        "lng": -95.55
+      },
       "regions": [
-        { "name": "Huntsville, TX",       "lat": 30.72, "lng": -95.55 },
-        { "name": "Atmore, AL (Holman)",  "lat": 31.13, "lng": -87.45 },
-        { "name": "Beijing, China",       "lat": 39.90, "lng": 116.41 },
-        { "name": "Tehran, Iran",         "lat": 35.69, "lng": 51.39 }
+        {
+          "name": "Huntsville, TX",
+          "lat": 30.72,
+          "lng": -95.55
+        },
+        {
+          "name": "Atmore, AL (Holman)",
+          "lat": 31.13,
+          "lng": -87.45
+        },
+        {
+          "name": "Beijing, China",
+          "lat": 39.9,
+          "lng": 116.41
+        },
+        {
+          "name": "Tehran, Iran",
+          "lat": 35.69,
+          "lng": 51.39
+        }
       ],
-      "color": "#6b8e9e",
-      "songs": [],
-      "primaryReading": "Banner, The Death Penalty: An American History",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#c2a78a",
+      "songs": [
+        "mercy-seat"
+      ],
+      "commentary": [
+        "~200 death-row exonerations since 1973 (DPIC / Innocence Project)",
+        "China executes ~1,000-8,000/year; Iran ~500-900",
+        "~41% of U.S. death row is Black (vs. ~13% of population)",
+        "Texas accounts for ~590 of post-1976 U.S. executions"
+      ],
+      "shortLabel": "Death Penalty",
+      "scaleStat": "~1,600 U.S. executions since 1976; thousands annually globally",
       "images": [],
       "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "events": [
+        {
+          "year": 1924,
+          "name": "First Gas Chamber",
+          "lat": 39.1638,
+          "lng": -119.7674,
+          "summary": "Nevada becomes the first jurisdiction in the world to use lethal gas, executing Gee Jon at Carson City. Promoted as more 'humane' than hanging or electrocution."
+        },
+        {
+          "year": 1972,
+          "name": "Furman v. Georgia",
+          "lat": 32.0809,
+          "lng": -81.0912,
+          "summary": "Supreme Court strikes down the death penalty as administered, finding it 'arbitrary and capricious' under the 8th Amendment. 629 inmates removed from death row; effective four-year moratorium."
+        },
+        {
+          "year": 1976,
+          "name": "Gregg v. Georgia",
+          "lat": 33.749,
+          "lng": -84.388,
+          "summary": "Supreme Court reinstates the death penalty with new procedural safeguards — bifurcated trials, aggravating/mitigating factors, automatic appeal. The modern American death-penalty era begins."
+        },
+        {
+          "year": 1977,
+          "name": "Gary Gilmore Execution",
+          "lat": 40.5253,
+          "lng": -111.8633,
+          "summary": "First execution after Gregg: Gilmore is killed by firing squad at Utah State Prison after demanding his own death and waiving further appeals. Subject of Norman Mailer's The Executioner's Song."
+        },
+        {
+          "year": 1981,
+          "name": "France Abolishes",
+          "lat": 48.8566,
+          "lng": 2.3522,
+          "summary": "France becomes the last Western European country to abolish the death penalty, under Justice Minister Robert Badinter, ending a 189-year tradition of the guillotine."
+        },
+        {
+          "year": 1982,
+          "name": "First Lethal Injection",
+          "lat": 30.7235,
+          "lng": -95.5508,
+          "summary": "Texas executes Charles Brooks Jr. by lethal injection at the Huntsville Unit — a method developed to be cheaper and less visually disturbing than the electric chair. Now used by every retentionist US state."
+        },
+        {
+          "year": 1995,
+          "name": "S v Makwanyane",
+          "lat": -26.2041,
+          "lng": 28.0473,
+          "summary": "Post-apartheid Constitutional Court rules unanimously that capital punishment violates the rights to life and dignity in South Africa's new constitution. Mandela's first major rights ruling."
+        },
+        {
+          "year": 2002,
+          "name": "Atkins v. Virginia",
+          "lat": 37.0299,
+          "lng": -76.3452,
+          "summary": "Supreme Court bars execution of intellectually disabled defendants as 'cruel and unusual.' Reverses 1989 Penry v. Lynaugh; states are left to define disability, producing wide variation."
+        },
+        {
+          "year": 2005,
+          "name": "Roper v. Simmons",
+          "lat": 38.5134,
+          "lng": -90.4376,
+          "summary": "Supreme Court bars execution of offenders who were under 18 at the time of their crime, citing 'evolving standards of decency' and overwhelming international consensus."
+        },
+        {
+          "year": 2014,
+          "name": "Lockett Botched Execution",
+          "lat": 34.9326,
+          "lng": -95.7697,
+          "summary": "Clayton Lockett's lethal injection at Oklahoma State Penitentiary fails after compounded drug substitutes cause a 43-minute death. Reignites the methodological and constitutional controversy over US executions."
+        }
+      ]
     },
     {
       "id": "refugees",
-      "countries": ["SYR", "AFG", "VEN", "SSD", "MMR", "UKR", "COD", "SOM", "ETH", "ERI"],
+      "countries": [
+        "SYR",
+        "AFG",
+        "VEN",
+        "SSD",
+        "MMR",
+        "UKR",
+        "COD",
+        "SOM",
+        "ETH",
+        "ERI"
+      ],
       "title": "Refugees",
       "startYear": 1945,
       "endYear": 2030,
       "ongoing": true,
-      "primaryCoords": { "lat": 36.20, "lng": 36.16 },
+      "primaryCoords": {
+        "lat": 36.2,
+        "lng": 36.16
+      },
       "regions": [
-        { "name": "Aleppo / Syrian flows",        "lat": 36.20, "lng": 37.16 },
-        { "name": "U.S. – Mexico border",         "lat": 32.54, "lng": -117.04 },
-        { "name": "Lampedusa, Italy",             "lat": 35.50, "lng": 12.61 },
-        { "name": "Cox's Bazar, Bangladesh (Rohingya)", "lat": 21.43, "lng": 92.00 }
+        {
+          "name": "Aleppo / Syrian flows",
+          "lat": 36.2,
+          "lng": 37.16
+        },
+        {
+          "name": "U.S. – Mexico border",
+          "lat": 32.54,
+          "lng": -117.04
+        },
+        {
+          "name": "Lampedusa, Italy",
+          "lat": 35.5,
+          "lng": 12.61
+        },
+        {
+          "name": "Cox's Bazar, Bangladesh (Rohingya)",
+          "lat": 21.43,
+          "lng": 92.0
+        }
       ],
-      "color": "#6b8e9e",
-      "songs": ["deportee", "this-land", "redemption-song"],
-      "primaryReading": "Betts & Collier, Refuge",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#2ea99a",
+      "songs": [
+        "deportee"
+      ],
+      "commentary": [
+        "Syria ~6.6M; Ukraine ~6.5M; Afghanistan ~6M; Venezuela ~7.7M",
+        "~1 million Rohingya in Cox's Bazar (Bangladesh)",
+        "~30,000+ have died on the Mediterranean crossing since 2014",
+        "Betts & Collier: the 1951 Refugee Convention is mismatched to today's protracted displacement"
+      ],
+      "shortLabel": "Refugees",
+      "scaleStat": "122+ million forcibly displaced (2024) — the highest in recorded history",
       "images": [],
-      "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "imageCaptions": []
     },
     {
       "id": "watchwords",
@@ -244,184 +975,669 @@
       "startYear": 1950,
       "endYear": 2030,
       "ongoing": true,
-      "primaryCoords": { "lat": 0, "lng": 0 },
+      "primaryCoords": {
+        "lat": 0,
+        "lng": 0
+      },
       "regions": [
-        { "name": "Guantánamo Bay, Cuba",       "lat": 19.91, "lng": -75.10 },
-        { "name": "Abu Ghraib, Iraq",           "lat": 33.30, "lng": 44.06 },
-        { "name": "Santiago, Chile",            "lat": -33.45, "lng": -70.66 },
-        { "name": "Belfast / N. Ireland",       "lat": 54.60, "lng": -5.93 },
-        { "name": "Soweto, South Africa",       "lat": -26.27, "lng": 27.86 }
+        {
+          "name": "Guantánamo Bay, Cuba",
+          "lat": 19.91,
+          "lng": -75.1
+        },
+        {
+          "name": "Abu Ghraib, Iraq",
+          "lat": 33.3,
+          "lng": 44.06
+        },
+        {
+          "name": "Santiago, Chile",
+          "lat": -33.45,
+          "lng": -70.66
+        },
+        {
+          "name": "Belfast / N. Ireland",
+          "lat": 54.6,
+          "lng": -5.93
+        },
+        {
+          "name": "Soweto, South Africa",
+          "lat": -26.27,
+          "lng": 27.86
+        }
       ],
-      "color": "#6b8e9e",
-      "songs": ["biko", "sunday-bloody-sunday", "zombie", "derecho-de-vivir", "blowin-in-the-wind", "times-they-are-changin"],
-      "primaryReading": "Cook (torture); Robertson (crimes against humanity)",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#9b59b6",
+      "songs": [
+        "blowin-in-the-wind"
+      ],
+      "commentary": [
+        "U.S. hate crimes: ~11,862 incidents in 2023 (FBI) — record high",
+        "Guantánamo: ~780 detainees since 2002; ~30 remain",
+        "Abu Ghraib photos (2004) exposed by MP Joe Darby",
+        "OLC 'torture memos' (2002) by John Yoo and Jay Bybee authorized waterboarding"
+      ],
+      "shortLabel": "Torture / Hate / Gender",
+      "scaleStat": "~1 in 3 women experiences gender violence; ~50,000 femicides per year",
       "images": [],
-      "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "imageCaptions": []
     },
     {
       "id": "apartheid",
-      "countries": ["ZAF"],
+      "countries": [
+        "ZAF"
+      ],
       "title": "Apartheid",
       "startYear": 1948,
       "endYear": 1994,
       "ongoing": false,
-      "primaryCoords": { "lat": -26.27, "lng": 27.86 },
+      "primaryCoords": {
+        "lat": -26.27,
+        "lng": 27.86
+      },
       "regions": [
-        { "name": "Soweto, South Africa",       "lat": -26.27, "lng": 27.86 },
-        { "name": "Johannesburg, South Africa", "lat": -26.20, "lng": 28.04 },
-        { "name": "Cape Town, South Africa",    "lat": -33.92, "lng": 18.42 }
+        {
+          "name": "Soweto, South Africa",
+          "lat": -26.27,
+          "lng": 27.86
+        },
+        {
+          "name": "Johannesburg, South Africa",
+          "lat": -26.2,
+          "lng": 28.04
+        },
+        {
+          "name": "Cape Town, South Africa",
+          "lat": -33.92,
+          "lng": 18.42
+        }
       ],
-      "color": "#d4a04a",
-      "songs": ["biko", "redemption-song"],
-      "primaryReading": "[YOU WRITE — Robertson; films from syllabus]",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#d97e3a",
+      "songs": [
+        "biko"
+      ],
+      "commentary": [
+        "Sharpeville (1960): 69 killed; Soweto Uprising (1976): ~176+ killed",
+        "~3.5 million Black South Africans forcibly removed under the Group Areas Act",
+        "Steve Biko killed in police custody (1977)",
+        "Truth and Reconciliation Commission (1995-2002) became the template for transitional justice"
+      ],
+      "shortLabel": "Apartheid",
+      "scaleStat": "~21,000 deaths from political violence (1948-1994); 27 years for Mandela",
       "images": [],
       "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "events": [
+        {
+          "year": 1948,
+          "name": "National Party Victory",
+          "lat": -25.75,
+          "lng": 28.19,
+          "summary": "Daniel Malan's National Party wins on a platform of formalized racial separation; apartheid begins as state policy."
+        },
+        {
+          "year": 1950,
+          "name": "Population Registration Act",
+          "lat": -33.92,
+          "lng": 18.42,
+          "summary": "Every South African classified by race (White, Coloured, Indian, Black) — the foundation of all subsequent apartheid law."
+        },
+        {
+          "year": 1960,
+          "name": "Sharpeville Massacre",
+          "lat": -26.69,
+          "lng": 27.86,
+          "summary": "Police fire on a peaceful pass-law protest, killing 69 and wounding 180. Triggers the banning of the ANC and PAC and Mandela's turn to armed struggle."
+        },
+        {
+          "year": 1964,
+          "name": "Rivonia Trial",
+          "lat": -25.78,
+          "lng": 28.2,
+          "summary": "Mandela and seven co-defendants sentenced to life in Pretoria; Mandela's 'I am prepared to die' speech. Begins 27 years on Robben Island."
+        },
+        {
+          "year": 1976,
+          "name": "Soweto Uprising",
+          "lat": -26.27,
+          "lng": 27.86,
+          "summary": "Students protest mandatory Afrikaans instruction; police kill ~176, including 13-year-old Hector Pieterson. Galvanizes the international anti-apartheid movement."
+        },
+        {
+          "year": 1977,
+          "name": "Steve Biko Killed",
+          "lat": -33.96,
+          "lng": 25.62,
+          "summary": "Black Consciousness leader beaten to death in police custody, then transported 1,100 km naked in the back of a Land Rover. Subject of Peter Gabriel's 'Biko'."
+        },
+        {
+          "year": 1990,
+          "name": "Mandela Released",
+          "lat": -33.69,
+          "lng": 18.945,
+          "summary": "After 27 years, Mandela walks free from Victor Verster Prison; F.W. de Klerk unbans the ANC, beginning the negotiated transition."
+        },
+        {
+          "year": 1994,
+          "name": "First Free Election",
+          "lat": -25.7461,
+          "lng": 28.1881,
+          "summary": "Universal-suffrage election; Mandela elected president. Apartheid formally ends."
+        }
+      ]
     },
     {
       "id": "vietnam-war",
-      "countries": ["VNM", "KHM", "LAO"],
+      "countries": [
+        "VNM",
+        "KHM",
+        "LAO"
+      ],
       "title": "Vietnam War & My Lai",
       "startYear": 1955,
       "endYear": 1975,
       "ongoing": false,
-      "primaryCoords": { "lat": 15.18, "lng": 108.85 },
+      "primaryCoords": {
+        "lat": 15.18,
+        "lng": 108.85
+      },
       "regions": [
-        { "name": "My Lai, Vietnam",        "lat": 15.18, "lng": 108.85 },
-        { "name": "Hanoi, Vietnam",         "lat": 21.03, "lng": 105.85 },
-        { "name": "Saigon (Ho Chi Minh City)", "lat": 10.78, "lng": 106.70 },
-        { "name": "Kent State, OH (protest)", "lat": 41.15, "lng": -81.34 }
+        {
+          "name": "My Lai, Vietnam",
+          "lat": 15.18,
+          "lng": 108.85
+        },
+        {
+          "name": "Hanoi, Vietnam",
+          "lat": 21.03,
+          "lng": 105.85
+        },
+        {
+          "name": "Saigon (Ho Chi Minh City)",
+          "lat": 10.78,
+          "lng": 106.7
+        },
+        {
+          "name": "Kent State, OH (protest)",
+          "lat": 41.15,
+          "lng": -81.34
+        }
       ],
-      "color": "#d4a04a",
-      "songs": ["ohio", "blowin-in-the-wind"],
-      "primaryReading": "[YOU WRITE — Power touches on it; films: Frontline: Remember My Lai, Vietnam Requiem, Winter Soldier]",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#8b9544",
+      "songs": [
+        "ohio"
+      ],
+      "commentary": [
+        "+300,000 Cambodians and +50,000 Laotians killed by U.S. bombing",
+        "My Lai Massacre (March 16, 1968): ~504 unarmed villagers killed",
+        "Lt. William Calley convicted; Hugh Thompson Jr. landed his helicopter to stop the killing",
+        "Seymour Hersh broke My Lai; Daniel Ellsberg leaked the Pentagon Papers (1971)"
+      ],
+      "shortLabel": "Vietnam / My Lai",
+      "scaleStat": "~58,220 U.S. dead; ~1-2 million Vietnamese civilian dead",
       "images": [],
       "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "events": [
+        {
+          "year": 1965,
+          "name": "US Combat Troops Land",
+          "lat": 16.07,
+          "lng": 108.22,
+          "summary": "First US Marine combat units land at Da Nang; troop levels grow to 536,000 by 1968."
+        },
+        {
+          "year": 1968,
+          "name": "Tet Offensive (Hue)",
+          "lat": 16.46,
+          "lng": 107.59,
+          "summary": "Coordinated North Vietnamese assault on 100+ cities; Hue occupied for 25 days, ~5,000 civilians executed by NVA. Shifts US public opinion against the war."
+        },
+        {
+          "year": 1968,
+          "name": "My Lai Massacre",
+          "lat": 15.18,
+          "lng": 108.86,
+          "summary": "Charlie Company kills ~504 Vietnamese civilians (mostly women, children, elderly) in four hours. Hugh Thompson lands his helicopter to stop the killing."
+        },
+        {
+          "year": 1971,
+          "name": "Calley Court-Martial",
+          "lat": 32.36,
+          "lng": -84.97,
+          "summary": "Lt. William Calley convicted of murdering 22 civilians at My Lai at Fort Benning; sentenced to life, paroled after 3.5 years under house arrest. Only conviction for the massacre."
+        },
+        {
+          "year": 1970,
+          "name": "Kent State",
+          "lat": 41.15,
+          "lng": -81.36,
+          "summary": "Ohio National Guard kills four students protesting the Cambodian invasion. Subject of CSNY's 'Ohio'."
+        },
+        {
+          "year": 1971,
+          "name": "Pentagon Papers",
+          "lat": 38.89,
+          "lng": -77.04,
+          "summary": "Daniel Ellsberg leaks the classified DoD history of US Vietnam involvement, revealing systematic government deception. NYT v. United States affirms press freedom."
+        },
+        {
+          "year": 1975,
+          "name": "Fall of Saigon",
+          "lat": 10.78,
+          "lng": 106.7,
+          "summary": "NVA captures the South Vietnamese capital; helicopter evacuations from US embassy. War ends."
+        }
+      ]
     },
     {
       "id": "troubles-ni",
-      "countries": ["IRL", "GBR"],
+      "countries": [
+        "IRL",
+        "GBR"
+      ],
       "title": "The Troubles (Northern Ireland)",
       "startYear": 1968,
       "endYear": 1998,
       "ongoing": false,
-      "primaryCoords": { "lat": 54.60, "lng": -5.93 },
+      "primaryCoords": {
+        "lat": 54.6,
+        "lng": -5.93
+      },
       "regions": [
-        { "name": "Belfast, Northern Ireland", "lat": 54.60, "lng": -5.93 },
-        { "name": "Derry/Londonderry",         "lat": 54.99, "lng": -7.31 },
-        { "name": "Omagh, Northern Ireland",   "lat": 54.60, "lng": -7.30 }
+        {
+          "name": "Belfast, Northern Ireland",
+          "lat": 54.6,
+          "lng": -5.93
+        },
+        {
+          "name": "Derry/Londonderry",
+          "lat": 54.99,
+          "lng": -7.31
+        },
+        {
+          "name": "Omagh, Northern Ireland",
+          "lat": 54.6,
+          "lng": -7.3
+        }
       ],
-      "color": "#d4a04a",
-      "songs": ["sunday-bloody-sunday", "zombie"],
-      "primaryReading": "[YOU WRITE — films: In the Name of the Father, Some Mother's Son, Omagh]",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#2eb872",
+      "songs": [
+        "sunday-bloody-sunday"
+      ],
+      "commentary": [
+        "Bloody Sunday (Jan 30, 1972): 14 unarmed marchers killed by British paratroopers",
+        "1981 hunger strike: Bobby Sands and 9 others died in Maze Prison",
+        "Omagh bombing (Aug 15, 1998): 29 killed, including a woman pregnant with twins",
+        "Good Friday Agreement signed April 10, 1998"
+      ],
+      "shortLabel": "The Troubles",
+      "scaleStat": "~3,532 killed and ~47,500 injured over 30 years",
       "images": [],
       "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "events": [
+        {
+          "year": 1968,
+          "name": "Derry Civil Rights March",
+          "lat": 54.99,
+          "lng": -7.31,
+          "summary": "Police attack a Northern Ireland Civil Rights Association march in Derry, broadcast worldwide. Conventional start of the Troubles."
+        },
+        {
+          "year": 1972,
+          "name": "Bloody Sunday",
+          "lat": 54.9966,
+          "lng": -7.3186,
+          "summary": "British paratroopers shoot 26 unarmed civilians at a civil-rights march in Derry, killing 14. Subject of U2's 'Sunday Bloody Sunday'."
+        },
+        {
+          "year": 1974,
+          "name": "Birmingham Pub Bombings",
+          "lat": 52.48,
+          "lng": -1.9,
+          "summary": "IRA bombs in two Birmingham pubs kill 21. The 'Birmingham Six' wrongfully convicted; released 1991. Subject of In the Name of the Father."
+        },
+        {
+          "year": 1981,
+          "name": "IRA Hunger Strikes",
+          "lat": 54.5,
+          "lng": -6.1,
+          "summary": "Bobby Sands and 9 others die on hunger strike at HM Maze demanding political-prisoner status. Sands elected to UK Parliament during the strike."
+        },
+        {
+          "year": 1993,
+          "name": "Warrington Bombings",
+          "lat": 53.39,
+          "lng": -2.59,
+          "summary": "IRA bombs kill two children in Warrington; Cranberries' 'Zombie' written in response."
+        },
+        {
+          "year": 1998,
+          "name": "Omagh Bombing",
+          "lat": 54.5965,
+          "lng": -7.3092,
+          "summary": "Real IRA car bomb kills 29 — deadliest single attack of the Troubles. Subject of the film Omagh."
+        },
+        {
+          "year": 1998,
+          "name": "Good Friday Agreement",
+          "lat": 54.6,
+          "lng": -5.93,
+          "summary": "Multi-party agreement establishes power-sharing assembly and ends the Troubles. Approved by 71% of NI voters in referendum."
+        }
+      ]
     },
     {
       "id": "latin-america",
-      "countries": ["CHL", "ARG", "SLV", "GTM", "BRA", "URY"],
+      "countries": [
+        "CHL",
+        "ARG",
+        "SLV",
+        "GTM",
+        "BRA",
+        "URY"
+      ],
       "title": "Latin American Dictatorships",
       "startYear": 1973,
       "endYear": 1990,
       "ongoing": false,
-      "primaryCoords": { "lat": -33.45, "lng": -70.66 },
+      "primaryCoords": {
+        "lat": -33.45,
+        "lng": -70.66
+      },
       "regions": [
-        { "name": "Santiago, Chile",            "lat": -33.45, "lng": -70.66 },
-        { "name": "Buenos Aires, Argentina",    "lat": -34.61, "lng": -58.38 },
-        { "name": "San Salvador, El Salvador",  "lat": 13.69,  "lng": -89.22 },
-        { "name": "Fort Benning, GA (School of the Americas)", "lat": 32.36, "lng": -84.97 }
+        {
+          "name": "Santiago, Chile",
+          "lat": -33.45,
+          "lng": -70.66
+        },
+        {
+          "name": "Buenos Aires, Argentina",
+          "lat": -34.61,
+          "lng": -58.38
+        },
+        {
+          "name": "San Salvador, El Salvador",
+          "lat": 13.69,
+          "lng": -89.22
+        },
+        {
+          "name": "Fort Benning, GA (School of the Americas)",
+          "lat": 32.36,
+          "lng": -84.97
+        }
       ],
-      "color": "#d4a04a",
-      "songs": ["derecho-de-vivir"],
-      "primaryReading": "[YOU WRITE — films: Father Roy, Romero, The Disappeared, Missing, Colonia Dignidad, The Pinochet Case]",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#f1c40f",
+      "songs": [
+        "derecho-de-vivir"
+      ],
+      "commentary": [
+        "Guatemala: ~83% of victims indigenous Maya (CEH truth commission)",
+        "El Salvador: ~75,000 killed; El Mozote massacre ~800-1,000 (1981)",
+        "Archbishop Óscar Romero assassinated March 24, 1980",
+        "U.S. School of the Americas (Fort Benning) trained many implicated officers"
+      ],
+      "shortLabel": "Latin American Dictatorships",
+      "scaleStat": "Argentina ~30,000 disappeared; Chile ~3,200 killed; Guatemala ~200,000 killed",
       "images": [],
       "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "events": [
+        {
+          "year": 1973,
+          "name": "Pinochet Coup",
+          "lat": -33.45,
+          "lng": -70.67,
+          "summary": "US-backed military coup overthrows Salvador Allende in Santiago; Pinochet's regime tortures and 'disappears' ~3,200 Chileans through 1990. Víctor Jara murdered four days later."
+        },
+        {
+          "year": 1976,
+          "name": "Argentine Dirty War",
+          "lat": -34.61,
+          "lng": -58.4,
+          "summary": "Junta seizes power in Buenos Aires; ESMA naval academy becomes detention center. ~30,000 'disappeared' through 1983, including babies stolen from imprisoned mothers."
+        },
+        {
+          "year": 1980,
+          "name": "Romero Assassinated",
+          "lat": 13.6989,
+          "lng": -89.1914,
+          "summary": "Archbishop Óscar Romero shot during Mass in San Salvador after publicly condemning state killings. Subject of the film Romero."
+        },
+        {
+          "year": 1981,
+          "name": "El Mozote Massacre",
+          "lat": 13.84,
+          "lng": -88.11,
+          "summary": "US-trained Atlacatl Battalion of the Salvadoran army kills ~1,000 civilians, mostly children. Long denied by the US and Salvadoran governments."
+        },
+        {
+          "year": 1985,
+          "name": "Trial of the Juntas",
+          "lat": -34.6118,
+          "lng": -58.396,
+          "summary": "Argentina prosecutes its own former military leaders — first such trial in Latin America. Five junta members convicted."
+        },
+        {
+          "year": 1989,
+          "name": "Chilean Plebiscite",
+          "lat": -33.4569,
+          "lng": -70.6483,
+          "summary": "55% vote 'No' to extending Pinochet's rule; democratic transition begins. Pinochet later arrested in London (1998)."
+        }
+      ]
     },
     {
       "id": "bosnia",
-      "countries": ["BIH", "HRV"],
+      "countries": [
+        "BIH",
+        "HRV"
+      ],
       "title": "Bosnian War & Srebrenica",
       "startYear": 1992,
       "endYear": 1995,
       "ongoing": false,
-      "primaryCoords": { "lat": 44.10, "lng": 19.30 },
+      "primaryCoords": {
+        "lat": 44.1,
+        "lng": 19.3
+      },
       "regions": [
-        { "name": "Srebrenica, Bosnia and Herzegovina", "lat": 44.10, "lng": 19.30 },
-        { "name": "Sarajevo, Bosnia and Herzegovina",   "lat": 43.85, "lng": 18.36 }
+        {
+          "name": "Srebrenica, Bosnia and Herzegovina",
+          "lat": 44.1,
+          "lng": 19.3
+        },
+        {
+          "name": "Sarajevo, Bosnia and Herzegovina",
+          "lat": 43.85,
+          "lng": 18.36
+        }
       ],
-      "color": "#d4a04a",
-      "songs": [],
-      "primaryReading": "Power, A Problem from Hell (chapters 7–9)",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#3873b0",
+      "songs": [
+        "miss-sarajevo"
+      ],
+      "commentary": [
+        "Siege of Sarajevo: 1,425 days — the longest siege of a capital in modern warfare",
+        "20,000-50,000 women raped as a tool of ethnic cleansing",
+        "Convicted of genocide at the ICTY: Radovan Karadžić and Ratko Mladić",
+        "Power: the Clinton administration evaded the word 'genocide' until after Srebrenica"
+      ],
+      "shortLabel": "Bosnia / Srebrenica",
+      "scaleStat": "~100,000 killed and ~2.2 million displaced; ~8,372 murdered at Srebrenica",
       "images": [],
       "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "events": [
+        {
+          "year": 1992,
+          "name": "Siege of Sarajevo",
+          "lat": 43.86,
+          "lng": 18.41,
+          "summary": "Bosnian Serb forces blockade the city for 1,425 days — longest siege of a capital in modern history. ~13,952 killed, including 5,434 civilians."
+        },
+        {
+          "year": 1992,
+          "name": "Omarska & Trnopolje",
+          "lat": 44.98,
+          "lng": 16.71,
+          "summary": "Bosnian Serb concentration camps near Prijedor; ITN footage of emaciated detainees evokes Auschwitz, ending Europe's 50-year 'Never Again.'"
+        },
+        {
+          "year": 1993,
+          "name": "Markale Market Shelling",
+          "lat": 43.8584,
+          "lng": 18.4252,
+          "summary": "Mortar attack on Sarajevo's central market kills 68 civilians; second attack in 1995 triggers the NATO air campaign."
+        },
+        {
+          "year": 1995,
+          "name": "Srebrenica Massacre",
+          "lat": 44.1,
+          "lng": 19.3,
+          "summary": "Bosnian Serb forces under Ratko Mladić execute ~8,372 Bosniak men and boys after capturing the UN 'safe area.' First legally recognized European genocide since the Holocaust."
+        },
+        {
+          "year": 1995,
+          "name": "Dayton Accords",
+          "lat": 39.76,
+          "lng": -84.19,
+          "summary": "21-day negotiation at Wright-Patterson AFB ends the war and partitions Bosnia. Signed in Paris 14 December 1995."
+        }
+      ]
     },
     {
       "id": "rwanda",
-      "countries": ["RWA"],
+      "countries": [
+        "RWA"
+      ],
       "title": "Rwandan Genocide",
       "startYear": 1994,
       "endYear": 1994,
       "ongoing": false,
-      "primaryCoords": { "lat": -1.95, "lng": 30.06 },
+      "primaryCoords": {
+        "lat": -1.95,
+        "lng": 30.06
+      },
       "regions": [
-        { "name": "Kigali, Rwanda", "lat": -1.95, "lng": 30.06 }
+        {
+          "name": "Kigali, Rwanda",
+          "lat": -1.95,
+          "lng": 30.06
+        }
       ],
-      "color": "#d4a04a",
-      "songs": [],
-      "primaryReading": "Power, A Problem from Hell (chapters 10–12)",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#af2f4a",
+      "songs": [
+        "million-voices"
+      ],
+      "commentary": [
+        "Fastest mass killing rate in modern history",
+        "~250,000-500,000 women raped",
+        "RTLM 'hate radio' broadcasts incited the killing",
+        "UN commander Roméo Dallaire warned in advance and was overruled"
+      ],
+      "shortLabel": "Rwandan Genocide",
+      "scaleStat": "~800,000-1,000,000 killed in 100 days (April-July 1994)",
       "images": [],
       "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "events": [
+        {
+          "year": 1994,
+          "name": "Habyarimana Plane Downed",
+          "lat": -1.9686,
+          "lng": 30.1395,
+          "summary": "April 6: surface-to-air missile downs the presidents of Rwanda and Burundi at Kigali airport — trigger for the genocide that begins within hours."
+        },
+        {
+          "year": 1994,
+          "name": "PM Uwilingiyimana Killed",
+          "lat": -1.9536,
+          "lng": 30.0606,
+          "summary": "April 7: moderate Hutu prime minister and 10 Belgian UN peacekeepers murdered in Kigali; Belgium withdraws and the UN cuts UNAMIR from 2,500 to 270."
+        },
+        {
+          "year": 1994,
+          "name": "Nyarubuye Church",
+          "lat": -2.21,
+          "lng": 30.79,
+          "summary": "April 15: Hutu militia and clergy massacre ~20,000 Tutsi who had taken refuge in the parish complex. Site now a national memorial."
+        },
+        {
+          "year": 1994,
+          "name": "Murambi Technical School",
+          "lat": -2.45,
+          "lng": 29.74,
+          "summary": "April: ~50,000 Tutsi told to gather at the school 'for protection' and murdered over 24 hours. Bodies preserved as a national memorial."
+        },
+        {
+          "year": 1994,
+          "name": "Bisesero Resistance",
+          "lat": -2.18,
+          "lng": 29.45,
+          "summary": "May–June: Tutsi farmers in the hills hold off Interahamwe attacks for two months armed with stones and farm tools; ~50,000 of 60,000 ultimately killed."
+        },
+        {
+          "year": 1994,
+          "name": "Operation Turquoise",
+          "lat": -2.06,
+          "lng": 29.35,
+          "summary": "June: late French military 'humanitarian' intervention in western Rwanda — criticized for sheltering retreating génocidaires."
+        },
+        {
+          "year": 1994,
+          "name": "RPF Captures Kigali",
+          "lat": -1.9441,
+          "lng": 30.0619,
+          "summary": "July: Paul Kagame's Rwandan Patriotic Front takes the capital, ending 100 days of genocide. ~800,000 dead — three-quarters of the Tutsi population."
+        }
+      ]
     },
     {
       "id": "post-911",
-      "countries": ["IRQ", "AFG", "CUB"],
+      "countries": [
+        "IRQ",
+        "AFG",
+        "CUB"
+      ],
       "title": "Post-9/11: Iraq, Guantánamo, Abu Ghraib",
       "startYear": 2001,
       "endYear": 2030,
       "ongoing": true,
-      "primaryCoords": { "lat": 19.91, "lng": -75.10 },
+      "primaryCoords": {
+        "lat": 19.91,
+        "lng": -75.1
+      },
       "regions": [
-        { "name": "Guantánamo Bay, Cuba",  "lat": 19.91, "lng": -75.10 },
-        { "name": "Abu Ghraib, Iraq",      "lat": 33.30, "lng": 44.06 },
-        { "name": "Bagram, Afghanistan",   "lat": 34.95, "lng": 69.27 },
-        { "name": "Baghdad, Iraq",         "lat": 33.31, "lng": 44.36 }
+        {
+          "name": "Guantánamo Bay, Cuba",
+          "lat": 19.91,
+          "lng": -75.1
+        },
+        {
+          "name": "Abu Ghraib, Iraq",
+          "lat": 33.3,
+          "lng": 44.06
+        },
+        {
+          "name": "Bagram, Afghanistan",
+          "lat": 34.95,
+          "lng": 69.27
+        },
+        {
+          "name": "Baghdad, Iraq",
+          "lat": 33.31,
+          "lng": 44.36
+        }
       ],
-      "color": "#d4a04a",
-      "songs": [],
-      "primaryReading": "[YOU WRITE — Cook (torture); films: Road to Guantanamo, Ghosts of Abu Ghraib, Torturing Democracy, Standing Operating Procedure]",
-      "commentary": "[YOU WRITE]",
-      "shortLabel": "[YOU WRITE: short pin label]",
-      "scaleStat": "[YOU WRITE]",
+      "color": "#5b3e9c",
+      "songs": [
+        "american-idiot"
+      ],
+      "commentary": [
+        "~7,000 U.S. troops killed; tens of thousands of post-9/11 veterans dead by suicide",
+        "Guantánamo: ~780 detainees since 2002; ~30 remain, most never charged",
+        "Architects: Bush, Cheney, Rumsfeld; 'torture memos' by John Yoo and Jay Bybee",
+        "Abu Ghraib photos exposed by MP Joe Darby (2004)"
+      ],
+      "shortLabel": "Post-9/11",
+      "scaleStat": "~200,000-300,000 Iraqi and ~46,000 Afghan civilian deaths",
       "images": [],
-      "imageCaptions": [],
-      "sources": ["[YOU CITE]"]
+      "imageCaptions": []
     }
   ]
 }
