@@ -1,0 +1,4 @@
+{
+  "_README": "Optional. Used by the globe to draw arcs between two coordinates (forced migration, deportation routes, the Middle Passage, etc.). Each arc has from {lat, lng} and to {lat, lng}; eraId is informational. Empty by default — uncomment / add entries to use.",
+  "arcs": []
+}

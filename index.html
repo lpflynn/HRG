@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Human Rights Globe — HIST/HRTS 3301</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="mobile-block">
+    <div class="mobile-message">
+      <h1>Best viewed on desktop</h1>
+      <p>This project relies on a 3D globe and timeline interactions designed for a larger screen and a mouse. Please open it on a desktop or laptop.</p>
+    </div>
+  </div>
+
+  <header id="title-bar">
+    <div class="title-group">
+      <h1 class="project-title">[YOU WRITE: Project Title]</h1>
+      <p class="project-subtitle">HIST/HRTS 3301 &middot; America&rsquo;s Dilemma: The Struggle for Human Rights</p>
+    </div>
+    <button id="about-btn" class="ghost-btn" type="button" aria-label="About this project">About</button>
+  </header>
+
+  <main>
+    <div id="globe-container" aria-label="Interactive globe"></div>
+
+    <aside id="side-panel" class="panel-hidden" aria-live="polite">
+      <button id="panel-close" class="panel-close" type="button" aria-label="Close panel">&times;</button>
+      <div id="panel-content"></div>
+    </aside>
+
+    <div id="audio-player" class="audio-hidden" aria-label="Audio player">
+      <div class="audio-meta">
+        <div class="audio-title" id="audio-title"></div>
+        <div class="audio-era" id="audio-era"></div>
+      </div>
+      <audio id="audio-element" preload="none"></audio>
+      <div class="audio-controls">
+        <button id="audio-toggle" class="audio-btn" type="button" aria-label="Play/pause">&#9658;</button>
+        <button id="audio-close" class="audio-btn audio-close" type="button" aria-label="Close audio">&times;</button>
+      </div>
+    </div>
+
+    <div id="about-overlay" class="overlay-hidden" role="dialog" aria-modal="true" aria-labelledby="about-title">
+      <div class="overlay-card">
+        <button id="about-close" class="panel-close" type="button" aria-label="Close">&times;</button>
+        <h2 id="about-title">About this project</h2>
+        <div class="about-body">
+          <p>[YOU WRITE: A short paragraph describing the project, its argument, and your relationship to the course.]</p>
+          <p class="about-credit">Built for HIST/HRTS 3301, Prof. Rick Halperin &middot; SMU &middot; May 2026.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="timeline-bar">
+    <button id="play-toggle" class="ghost-btn play-btn" type="button" aria-label="Play/pause autoplay">
+      <span id="play-icon">&#9658;</span>
+    </button>
+    <div class="timeline-track">
+      <input
+        id="timeline-slider"
+        type="range"
+        min="1400"
+        max="2030"
+        step="1"
+        value="1400"
+        aria-label="Year"
+      />
+      <div id="timeline-bands" aria-hidden="true"></div>
+    </div>
+    <div class="year-display" id="year-display">1400</div>
+  </footer>
+
+  <script src="lib/globe.gl.min.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/panel.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/globe.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

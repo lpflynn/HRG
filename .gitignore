@@ -1,0 +1,18 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# build / deps (none right now, but future-proof)
+node_modules/
+dist/
+
+# local env
+.env
+.env.local
+
+# zipped submission artifact
+*.zip
